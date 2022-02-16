@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="consolestyler" Version="1.0.0" />
     <PackageReference Include="csvhelper" Version="27.2.1" />
     <PackageReference Include="HtmlAgilityPack" Version="1.11.42" />
   </ItemGroup>
