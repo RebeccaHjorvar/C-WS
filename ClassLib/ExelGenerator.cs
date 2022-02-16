@@ -6,19 +6,17 @@ public class CsvRow
     public string? Item { get; set; }
 }
 
-public class Excel
+public class ExcelGenerator
 {
     public string CreateExcel(HtmlAgilityPack.HtmlNodeCollection dataList, string documentName)
-    {
+    {   var stringHandler = new StringHandler();
         var filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         var excel = new List<CsvRow>();
         var output = "An exel sheet containing your selected data has now been added to your documents folder";
         
         foreach (var item in dataList)
         {
-            var firstName = item.InnerText.Split(' ').First();
-            var lastNameLetter = item.InnerText.Split(' ').Last().Substring(0,1);
-            var name = $"{firstName} {lastNameLetter}.";
+            var name = stringHandler.NameSubstrings(item);
 
             excel.Add(
                 new CsvRow 
