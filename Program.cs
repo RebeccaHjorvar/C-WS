@@ -23,6 +23,7 @@ if (input.ToLower() != "y")
     Quote.PlainExit();
 }
 
+// Scrapes data and generates an excel file
 var output = excelGenerator.CreateExcel(scraper.ScrapeData(url, nodeSelection), "mycsvexcelfile");
 Quote.CreatedFileExit(output);  
 
