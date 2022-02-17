@@ -40,9 +40,6 @@ public class ExcelGenerator
         return output;
     }
 
-
-    //TODO create method for first- and lastname items that returns Firstname L.
-
 }
 
 
