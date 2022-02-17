@@ -8,6 +8,11 @@ public class CsvRow
 
 public class ExcelGenerator
 {
+    /// <summary>
+    /// Lets user exit console
+    /// <summary>
+    /// <param name="dataList">The data list that will be in the excel document</param>
+    /// <param name="documentName">Sets the name of the excel document</params>
     public string CreateExcel(HtmlAgilityPack.HtmlNodeCollection dataList, string documentName)
     {   var stringHandler = new StringHandler();
         var filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
