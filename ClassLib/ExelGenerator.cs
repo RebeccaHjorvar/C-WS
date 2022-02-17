@@ -3,7 +3,7 @@ using CsvHelper;
 
 public class CsvRow 
 {
-    public string? Item { get; set; }
+    public string? Data { get; set; }
 }
 
 public class ExcelGenerator
@@ -26,7 +26,7 @@ public class ExcelGenerator
             excel.Add(
                 new CsvRow 
                 {
-                    Item = name
+                    Data = name
                 }
             );
         }
