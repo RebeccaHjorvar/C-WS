@@ -4,7 +4,7 @@ public static class Quote
     /// Displays the url that will be scraped and generates a welcome text 
     ///that asks for a "Y / N" answer from the user.
     /// </summary>
-    /// <param name="url">The url that has been scraped</params>
+    /// <param name="url">The url that has been scraped</param>
     public static void WelcomeText(string url)
     {
         Console.WriteLine("Would you like to create an excel file containing the employees currently listed on: ");
