@@ -4,6 +4,7 @@ public static class Quote
     /// Displays the url that will be scraped and generates a welcome text 
     ///that asks for a "Y / N" answer from the user.
     /// </summary>
+    /// <param name="url">The url that has been scraped</params>
     public static void WelcomeText(string url)
     {
         Console.WriteLine("Would you like to create an excel file containing the employees currently listed on: ");
@@ -15,7 +16,7 @@ public static class Quote
     }
     /// <summary>
     /// Lets user exit console
-    /// <summary>
+    /// </summary>
     public static void PlainExit()
     {
         Console.WriteLine();
@@ -24,7 +25,8 @@ public static class Quote
     }
     /// <summary>
     /// Displays custom output and lets user exit console
-    /// <summary>
+    /// </summary>
+    /// <param name="output">The message before exit option.</param>
     public static void CreatedFileExit(string output)
     {
         Console.WriteLine();
