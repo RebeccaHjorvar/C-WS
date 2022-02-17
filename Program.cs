@@ -11,12 +11,8 @@ var excelGenerator = new ExcelGenerator();
 string url = "https://www.nbi-handelsakademin.se/kontakt/";
 string nodeSelection = "//h4[(@class='light')]";
 
-Console.WriteLine("Would you like to create an excel file containing the employees currently listed on: ");
-Console.WriteLine();
-Console.WriteLine($"- {url} - ");
-Console.WriteLine();
-Console.WriteLine(" Y / N ");
-Console.WriteLine();
+// Asks user if they want to create an excel csv
+Quote.WelcomeText(url);
 
 string? input = Console.ReadLine();
 
@@ -27,6 +23,7 @@ if (input.ToLower() != "y")
     Quote.PlainExit();
 }
 
+// Scrapes data and generates an excel file
 var output = excelGenerator.CreateExcel(scraper.ScrapeData(url, nodeSelection), "mycsvexcelfile");
 Quote.CreatedFileExit(output);  
 
